@@ -153,6 +153,9 @@
   <data name="HotkeyType_VideoThumbnailer" xml:space="preserve">
     <value>Video thumbnailer</value>
   </data>
+  <data name="GetFileIconError" xml:space="preserve">
+    <value>Error getting icon on path {0}</value>
+  </data>
   <data name="ShapeType_EffectBlur" xml:space="preserve">
     <value>Blur (B)</value>
   </data>

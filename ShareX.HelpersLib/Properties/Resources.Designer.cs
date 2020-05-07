@@ -898,6 +898,15 @@ namespace ShareX.HelpersLib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error getting icon on path {0}.
+        /// </summary>
+        internal static string GetFileIconError {
+            get {
+                return ResourceManager.GetString("GetFileIconError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Octree quantizer 16 colors.
         /// </summary>
         internal static string GIFQuality_Bit4 {

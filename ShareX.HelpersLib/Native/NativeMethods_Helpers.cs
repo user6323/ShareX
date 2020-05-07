@@ -23,6 +23,7 @@
 
 #endregion License Information (GPL v3)
 
+using ShareX.HelpersLib.Properties;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -544,7 +545,11 @@ namespace ShareX.HelpersLib
             }
 
             SHGetFileInfo(filePath, 0, ref shfi, (uint)Marshal.SizeOf(shfi), (uint)flags);
-
+            if (shfi.iIcon == 0)
+            {
+                DebugHelper.WriteException(string.Format(Resources.GetFileIconError, filePath));
+                return null;
+            }
             Icon icon = (Icon)Icon.FromHandle(shfi.hIcon).Clone();
             DestroyIcon(shfi.hIcon);
             return icon;
